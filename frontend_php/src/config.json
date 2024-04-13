@@ -1,0 +1,7 @@
+{
+  "fetchAllTeamApi": "/backend_php/functions/endpointAllMembers.php",
+  "deleteOneTeamMemberApi": "/backend_php/functions/fetchFormDeleteTeamMember.php",
+  "editOneTeamMemberApi": "/backend_php/functions/fetchFormEditTeamMember.php",
+  "addOneTeamMemberApi": "/backend_php/functions/fetchFormAddTeamMember.php",
+  "fetchOneTeamMemberByIdApi": "/backend_php/functions/fetchFormGetTeamMemberById.php"
+}

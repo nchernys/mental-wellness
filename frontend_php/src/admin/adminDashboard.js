@@ -14,17 +14,12 @@ const AdminDashboard = () => {
         <Link className="admin-dashboard-link" to="/admin-add-team">
           Add team members
         </Link>
-
         <div className="admin-dashboard-heading">Our research</div>
         <Link className="admin-dashboard-link">View all research entries</Link>
-        <Link className="admin-dashboard-link" to="/admin-add-blog">
-          Add research entries
-        </Link>
+        Add research entries
         <div className="admin-dashboard-heading">Our Events</div>
         <Link className="admin-dashboard-link">View all blog entries</Link>
-        <Link className="admin-dashboard-link" to="/admin-add-blog">
-          Add blog entries
-        </Link>
+        Add blog entries
       </div>
     </>
   );

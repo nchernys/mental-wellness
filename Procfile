@@ -1,1 +1,0 @@
-web: cd frontend_php && npm run start

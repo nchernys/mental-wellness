@@ -16,10 +16,10 @@ const AdminDashboard = () => {
         </Link>
         <div className="admin-dashboard-heading">Our research</div>
         <Link className="admin-dashboard-link">View all research entries</Link>
-        Add research entries
+        <Link className="admin-dashboard-link"> Add research entries</Link>
         <div className="admin-dashboard-heading">Our Events</div>
         <Link className="admin-dashboard-link">View all blog entries</Link>
-        Add blog entries
+        <Link className="admin-dashboard-link">Add blog entries</Link>
       </div>
     </>
   );

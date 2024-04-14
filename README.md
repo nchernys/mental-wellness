@@ -13,7 +13,7 @@ The project currently features fully functional Home and Team pages.
 Responsive design is being developed. Currently, the website is optimazied for the screen width 1200px.
 
 ## Screenshots ##
-<img width="800" src="https://github.com/nchernys/mental-wellness/blob/master/nonprofit_img.png" alt="about_hotel">
-<img width="800" src="https://github.com/nchernys/mental-wellness/blob/master/nonprofit_img_front_team.png" alt="about_hotel">
-<img width="800" src="https://github.com/nchernys/mental-wellness/blob/master/nonprofit_team_all.png" alt="about_hotel">
-<img width="800" src="https://github.com/nchernys/mental-wellness/blob/master/nonprofit_team_ind.png" alt="about_hotel">
+<img width="400" src="https://github.com/nchernys/mental-wellness/blob/master/nonprofit_img.png" alt="about_hotel">
+<img width="400" src="https://github.com/nchernys/mental-wellness/blob/master/nonprofit_img_front_team.png" alt="about_hotel">
+<img width="400" src="https://github.com/nchernys/mental-wellness/blob/master/nonprofit_team_all.png" alt="about_hotel">
+<img width="400" src="https://github.com/nchernys/mental-wellness/blob/master/nonprofit_team_ind.png" alt="about_hotel">

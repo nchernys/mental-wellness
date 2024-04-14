@@ -25,7 +25,7 @@ if ($content_type !== 'application/json') {
 }
  */
 
-error_log("DB file");
+
 
 require_once('../config.php'); 
 

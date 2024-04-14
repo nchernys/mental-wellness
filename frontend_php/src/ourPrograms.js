@@ -56,7 +56,9 @@ const OurPrograms = () => {
           </div>
         </div>
       </div>
-      <button>See all programs</button>
+      <button title="The program section is being developed!">
+        See all programs
+      </button>
     </div>
   );
 };

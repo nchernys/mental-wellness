@@ -10,7 +10,9 @@ const DonateBanner = () => {
         <div>sponsored</div>
         <div>3 workshops</div>
         <div>4 therapy sessions</div>
-        <button>Donate</button>
+        <button title="The donations section is being developed!">
+          Donate
+        </button>
       </div>
     </div>
   );

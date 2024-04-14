@@ -45,7 +45,9 @@ const OurResearch = () => {
           </div>
         </div>
       </div>
-      <button>See all research</button>
+      <button title="The research section is being developed!">
+        See all research
+      </button>
     </div>
   );
 };

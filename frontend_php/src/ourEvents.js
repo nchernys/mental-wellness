@@ -60,7 +60,9 @@ const OurEvents = () => {
         </div>
       </div>
 
-      <button>See all events</button>
+      <button title="The events section is being developed!">
+        See all events
+      </button>
     </div>
   );
 };

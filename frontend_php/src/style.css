@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --background-main-color: #ab0517;
 }
 
 html,
 body {
-  min-width: 1200px;
+  min-width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -13,20 +15,25 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+/* ************ NAVIGATION *********************/
+.nav-sandwich {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 10;
+}
+
 .nav-bar {
-  display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 3em;
   background-color: transparent;
   color: white;
-  padding: 0 2em;
   box-sizing: border-box;
   position: absolute;
   z-index: 5;
-  left: 0;
-  top: 0;
+  right: 1em;
+  top: 5em;
 }
 
 .nav-bar a {
@@ -35,10 +42,12 @@ body {
 }
 
 .all-menu-items {
+  width: 80%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  width: 70%;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 1);
 }
 
 .logo a {
@@ -55,51 +64,110 @@ body {
 }
 
 .menu-dropdown {
-  position: relative;
-  margin-left: 7em;
+  width: 100%;
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .nav-bar .menu-heading {
-  padding: 0.25em 1em;
-  background-color: rgba(0, 0, 0, 0.9);
-  font-size: 0.9em;
+  width: 100%;
+  padding: 1.5em 2em;
+  font-size: 1.5em;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .menu-item-container {
-  width: 12em;
+  width: 100%;
   height: auto;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 5;
-  position: absolute;
-  top: 2em;
-  right: 0;
+  box-sizing: border-box;
 }
 
 .menu-item {
-  text-align: center;
-  padding: 1.5em 2em 1.5em 2em;
-  border-bottom: 1px rgba(255, 255, 255, 0.379) solid;
+  text-align: left;
+  padding: 1em 0 1em 4em;
+  font-size: 1.3em;
   cursor: pointer;
 }
 
+@media screen and (min-width: 600px) {
+  .nav-sandwich {
+    display: none;
+  }
+
+  .nav-bar {
+    width: 100%;
+    height: 3em;
+    top: 0;
+    left: 0;
+    padding: 0 2em;
+    color: white;
+    display: flex !important;
+  }
+
+  .nav-bar a {
+    color: white;
+  }
+
+  .all-menu-items {
+    width: 70%;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  .menu-dropdown {
+    position: relative;
+    margin-left: 2em;
+    width: auto;
+    position: relative;
+  }
+
+  .nav-bar .menu-heading {
+    text-align: center;
+    padding: 0.25em 0;
+    width: 8em;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .menu-item-container {
+    width: 12em;
+    position: absolute;
+    z-index: 5;
+    top: 2em;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .menu-item {
+    text-align: center;
+    padding: 1.5em 2em 1.5em 2em;
+    border-bottom: 1px rgba(255, 255, 255, 0.379) solid;
+    font-size: 0.9em;
+  }
+}
+
+/************** FRONT PAGE ************************/
+
 .front {
-  background-color: var(--background-main-color);
   color: white;
   width: 100%;
-  height: 98vh;
+  height: 100vh;
   display: flex;
 }
 
 .front-text {
-  width: 32%;
+  width: 100%;
   height: 100%;
   padding: 5em 2em;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: center;
+  position: relative;
+  background-color: rgba(171, 5, 24, 0.8);
 }
 
 .front-heading-1 {
@@ -110,9 +178,9 @@ body {
   line-height: 1em;
 }
 .front-subheading {
-  width: 65%;
-  font-size: 1.5em;
-  line-height: 1.25em;
+  width: 80%;
+  font-size: calc(1.2em + 0.2vw);
+  line-height: calc(1.5em + 0.2vw);
   margin: 1.5em 0;
   font-weight: 200;
 }
@@ -129,9 +197,13 @@ body {
 }
 
 .front-images {
-  width: 70%;
+  width: 100%;
   height: 100%;
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .front-images .image-container {
@@ -159,10 +231,41 @@ body {
   object-position: 55% 10%;
 }
 
+@media screen and (min-width: 600px) {
+  .front {
+    height: 80vh;
+  }
+  .front-text {
+    width: 45%;
+    background-color: var(--background-main-color);
+    position: static;
+    padding: 5em 2em;
+  }
+  .front-images {
+    width: 55%;
+    position: static;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .front {
+    height: 98vh;
+  }
+
+  .front-text {
+    width: 32%;
+  }
+  .front-images {
+    width: 70%;
+  }
+}
+
+/********************** WHO WE ARE ***********************/
+
 .who-we-are {
   width: 100%;
   height: auto;
-  padding: 6em 20em 10em;
+  padding: 6em 1.5em 10em;
   box-sizing: border-box;
 }
 
@@ -174,8 +277,8 @@ body {
 
 .who-we-are-photo {
   border-radius: 50%;
-  width: 10em;
-  height: 10em;
+  width: 7em;
+  height: 7em;
   overflow: hidden;
 }
 
@@ -187,21 +290,20 @@ body {
 
 .who-we-are-heading {
   padding: 0 1em;
-  font-size: 3em;
-  font-weight: 400;
+  font-size: 1.5em;
+  font-weight: 800;
 }
 
 .who-we-are-text {
   padding: 3em 0;
-  font-size: 0.95em;
-  line-height: 1.4em;
-  column-count: 2;
-  column-gap: 2em;
+  font-size: 1em;
+  line-height: 1.5em;
   font-weight: 300;
 }
 
 .who-we-are-signature {
   display: flex;
+  font-size: 1em;
   flex-direction: column;
   line-height: 1.4em;
 }
@@ -210,14 +312,52 @@ body {
   font-weight: 500;
 }
 
+@media screen and (min-width: 600px) {
+  .who-we-are {
+    width: 100%;
+    padding: 6em 5em 10em;
+  }
+
+  .who-we-are-photo {
+    width: 10em;
+    height: 10em;
+  }
+
+  .who-we-are-heading {
+    font-size: 3em;
+    font-weight: 400;
+  }
+  .who-we-are-text {
+    padding: 3em 1em;
+    column-count: 2;
+    column-gap: 2em;
+    font-size: 0.95em;
+  }
+
+  .who-we-are-signature-name {
+    font-size: 0.95em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .who-we-are {
+    width: 100%;
+    padding: 6em 20em 10em;
+  }
+}
+
+/* ************** OUR TEAM ******************/
+
 .our-team {
   width: 100%;
+  padding: 0 1em;
   height: auto;
   box-sizing: border-box;
+  overflow-x: scroll;
 }
 
 .our-team-container {
-  width: 80%;
+  width: 100%;
   height: 30em;
   display: flex;
   margin: 0 auto;
@@ -245,6 +385,7 @@ body {
 .our-team-heading a {
   width: 80%;
 }
+
 .our-team-heading a button {
   background-color: transparent;
   color: white;
@@ -322,20 +463,46 @@ body {
 
 .our-team-card-info__read-more {
   margin: 2em 0 0;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .our-team-card-container {
   margin-left: 0.5em;
 }
 
-.in-focus {
-  width: 30em;
-}
+@media screen and (min-width: 600px) {
+  .our-team {
+    overflow-x: hidden;
+  }
+  .our-team-container {
+    width: 70%;
+  }
 
-.not-in-focus {
-  width: calc(100% / 5);
-  height: 100%;
-  overflow: hidden;
+  .our-team-card {
+    margin: 0 0.25em;
+  }
+
+  .our-team-slider div {
+    width: 0.5em;
+    height: 0.5em;
+    background-color: black;
+    margin: 1em 0.5em;
+  }
+
+  .our-team-slider .active {
+    background-color: white;
+    border: 1px solid black;
+  }
+
+  .in-focus {
+    width: 30em;
+  }
+  .not-in-focus {
+    width: calc(100% / 5);
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 .our-team-slider {
@@ -344,25 +511,16 @@ body {
   justify-content: center;
 }
 
-.our-team-slider div {
-  width: 0.5em;
-  height: 0.5em;
-  background-color: black;
-  margin: 1em 0.5em;
-}
-
-.our-team-slider .active {
-  background-color: white;
-  border: 1px solid black;
-}
+/* ************* OUR PROGRAM *************** */
 
 .our-programs {
-  width: 80%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .our-programs-heading {
@@ -388,9 +546,12 @@ body {
 }
 
 .one-program {
-  width: 28%;
+  width: 100%;
   height: auto;
   margin: 1em;
+  padding: 1em;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 .one-program-heading {
@@ -414,13 +575,38 @@ body {
   font-weight: 400;
 }
 
+@media screen and (min-width: 600px) {
+  .our-programs {
+    width: 100%;
+    padding: 0 2em;
+  }
+  .one-program {
+    width: 28%;
+    border: none;
+    padding: 0;
+    text-align: left;
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .our-programs {
+    width: 80%;
+    padding: 0 2em;
+  }
+}
+
+/* ************ OUR RESEARCH ***************/
+
 .our-research {
-  width: 80%;
+  width: 100%;
+  padding: 0 1em;
   height: auto;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .our-research-heading {
@@ -434,12 +620,14 @@ body {
   padding: 6em 0 3.5em;
   display: flex;
   justify-content: space-between;
+  overflow-x: scroll;
 }
 
 .research-card {
-  min-width: 13em;
+  min-width: 15em;
   width: calc(85% / 4);
   min-height: 30em;
+  margin-right: 2em;
 }
 
 .research-card-image {
@@ -475,15 +663,35 @@ body {
   font-weight: 400;
 }
 
+@media screen and (min-width: 600px) {
+  .our-research {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .our-research {
+    width: 80%;
+  }
+
+  .all-research {
+    overflow-x: hidden;
+  }
+}
+/* ********* DONATION *********** */
+
 .donation-banner {
   width: 100%;
-  height: auto;
+  height: 80vh;
   display: flex;
   background-color: rgb(245, 245, 245);
+  position: relative;
+  padding: 1em 0;
+  box-sizing: border-box;
 }
 
 .donation-image {
-  width: 60%;
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }
@@ -495,17 +703,37 @@ body {
 }
 
 .donation-text {
-  width: 40%;
-  font-size: 1.8em;
+  width: 100%;
+  height: 100%;
+  font-size: calc(1.2em + 0.2vw);
   font-weight: 400;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .donation-text div {
   margin: 0.25em 0;
+}
+
+.donation-text div:nth-child(1) {
+  font-weight: 600;
+  margin: 0.5em 0;
+}
+
+.donation-text div:nth-child(2) {
+  font-weight: 800;
+  color: var(--background-main-color);
+}
+
+.donation-text div:nth-child(3),
+.donation-text div:nth-child(4),
+.donation-text div:nth-child(5) {
+  font-weight: 600;
 }
 
 .donation-sum {
@@ -515,8 +743,8 @@ body {
 }
 
 .donation-banner button {
-  width: 12em;
-  height: 4em;
+  width: 10em;
+  height: 3em;
   font-size: 1.2rem;
   background-color: var(--background-main-color);
   font-family: inherit;
@@ -526,13 +754,36 @@ body {
   margin: 2em 0 0.25em 0;
 }
 
+@media screen and (min-width: 600px) {
+  .donation-banner {
+    width: 100%;
+    min-height: 60vh;
+    position: static;
+  }
+
+  .donation-text {
+    position: static;
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .donation-banner {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ****************** OUR EVENTS ************** */
 .our-events {
-  width: 80%;
+  width: 100%;
   height: auto;
+  padding: 0 1em;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .our-events-heading {
@@ -546,12 +797,14 @@ body {
   padding: 6em 0 4.5em;
   display: flex;
   justify-content: space-between;
+  overflow-x: scroll;
 }
 
 .event-card {
-  min-width: 13em;
+  min-width: 15em;
   width: calc(85% / 4);
   min-height: 30em;
+  margin-right: 2em;
 }
 
 .event-card-image {
@@ -598,6 +851,19 @@ body {
   font-weight: 400;
 }
 
+@media screen and (min-width: 600px) {
+}
+
+@media screen and (min-width: 1000px) {
+  .our-events {
+    width: 80%;
+  }
+
+  .all-events {
+    overflow-x: hidden;
+  }
+}
+
 .section {
   margin: 0 auto 11em auto;
 }
@@ -617,10 +883,10 @@ footer a {
   text-decoration: none;
 }
 
-/* ADD TEAM MEMBERS PAGE */
+/* **************** ADMIN: ADD TEAM MEMBERS PAGE ******************* */
 
 .add-team-section {
-  width: 40%;
+  width: 80%;
   height: auto;
   margin: 0 auto;
   padding: 2em 0 6em;
@@ -646,7 +912,13 @@ footer a {
   margin: 0 auto;
 }
 
-/* ALL TEAM */
+@media screen and (min-width: 600px) {
+  .add-team-section {
+    width: 40%;
+  }
+}
+
+/* ************** DASHBOARD *******************  */
 
 .result {
   width: 50%;
@@ -655,9 +927,10 @@ footer a {
 }
 
 .dashboard-section {
-  width: 50%;
+  width: 100%;
   height: auto;
   margin: 2em auto;
+  padding: 0 2em;
   display: flex;
   flex-direction: column;
 }
@@ -682,18 +955,33 @@ footer a {
   text-decoration: none;
 }
 
-.dashboard-all-team-section {
-  width: 50%;
-  height: auto;
-  margin: 2em auto;
-  display: flex;
-  flex-direction: column;
+@media screen and (min-width: 600px) {
+  .dashboard-section {
+    width: 50%;
+  }
 }
 
+/* ************** ALL TEAM *******************  */
+
+.dashboard-all-team-section {
+  width: 100%;
+  height: auto;
+  margin: 2em auto;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 600px) {
+  .dashboard-all-team-section {
+    width: 50%;
+  }
+}
 .dashboard-all-team-super-heading {
   font-size: 2em;
   font-weight: bold;
-  width: 100%;
+  width: auto;
   text-align: center;
   padding: 1em;
 }
@@ -760,21 +1048,7 @@ footer a {
   color: var(--background-main-color);
 }
 
-.admin-nav {
-  width: 100%;
-  height: 3em;
-  display: flex;
-  align-items: center;
-  padding: 0 2em;
-  background-color: rgb(45, 45, 45);
-  box-sizing: border-box;
-}
-
-.admin-nav a {
-  margin: 0 2em 0 0;
-  text-decoration: none;
-  color: white;
-}
+/* *********** ADMIN ADD TEAM MEMBER **************** */
 
 .admin-team-form input,
 .admin-team-form textarea {
@@ -785,6 +1059,8 @@ footer a {
 .admin-team-form textarea {
   line-height: 1.5em;
 }
+
+/* CLIENT ALL TEAM PAGE */
 
 .one-team-member-section {
   width: 70%;
@@ -885,8 +1161,6 @@ footer a {
   color: rgba(0, 0, 0, 0.1);
 }
 
-/* CLIENT ALL TEAM PAGE */
-
 .client-all-team-section {
   width: 80%;
   height: auto;
@@ -965,4 +1239,21 @@ footer a {
   width: 35%;
   margin: 1em 0 0 0;
   text-align: center;
+}
+
+/* ********************* NAV ADMIN ************************** */
+.admin-nav {
+  width: 100%;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  padding: 0 2em;
+  background-color: rgb(45, 45, 45);
+  box-sizing: border-box;
+}
+
+.admin-nav a {
+  margin: 0 2em 0 0;
+  text-decoration: none;
+  color: white;
 }

@@ -7,7 +7,6 @@ const OurTeam = () => {
   const [inFocus, setInFocus] = useState(0);
 
   useEffect(() => {
-    console.log("HERE!", config.fetchAllTeamApi);
     fetchTeam();
   }, []);
 

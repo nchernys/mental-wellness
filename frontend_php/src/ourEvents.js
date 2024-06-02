@@ -2,7 +2,7 @@ const OurEvents = () => {
   return (
     <div className="our-events section">
       <div className="our-events-heading">
-        <div className="square"></div>Our News and Events
+        <div className="square"></div>Our Events
       </div>
 
       <div className="all-events ">

@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Navigation = ({ navBackground, headingBackground, navTextColor }) => {
   const location = useLocation();
   const [openMenu, setOpenMenu] = useState(null);
+  const [showMenu, setShowMenu] = useState(false);
 
   const handleOpenMenu = (id) => {
     setOpenMenu(id);
@@ -13,12 +14,26 @@ const Navigation = ({ navBackground, headingBackground, navTextColor }) => {
     setOpenMenu(null);
   };
 
+  const handleToggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <header>
+      <div className="nav-sandwich" onClick={handleToggleMenu}>
+        <img
+          width="40"
+          height="40"
+          src="https://img.icons8.com/ios/100/ffffff/menu--v1.png"
+          alt="menu--v1"
+        />
+      </div>
+
       <div
         className={`nav-bar`}
         style={{
           backgroundColor: navBackground ? navBackground : "transparent",
+          display: showMenu ? "flex" : "none",
         }}
       >
         <div

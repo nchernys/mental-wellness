@@ -18,16 +18,16 @@ const FrontPage = () => {
       </div>
       <div class="front-images">
         <div class="image-container">
-          <img src="/images/person10-1.jpg" alt="" />
+          <img src="/images/person10-1.webp" alt="" />
         </div>
         <div class="image-container img11">
-          <img src="/images/person11.jpg" alt="" />
+          <img src="/images/person11.webp" alt="" />
         </div>
         <div class="image-container img13">
-          <img src="/images/person13.jpg" alt="" />
+          <img src="/images/person13.webp" alt="" />
         </div>
         <div class="image-container img12">
-          <img src="/images/person12.jpg" alt="" />
+          <img src="/images/person12.webp" alt="" />
         </div>
       </div>
     </div>

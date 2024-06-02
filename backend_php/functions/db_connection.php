@@ -34,6 +34,8 @@ $username = DB_USER;
 $password = DB_PASS;
 $dbname = DB_NAME;
 
+
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
